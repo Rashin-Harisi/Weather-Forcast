@@ -21,7 +21,7 @@ function App() {
   const getWeather = async () => {
     try {
       const api_call = await fetch(
-        `http://api.openweathermap.org/data/2.5/weather?q=${name}&APPID=${API_KEYS}`
+        `https://api.openweathermap.org/data/2.5/weather?q=${name}&APPID=${API_KEYS}`
       );
       const res = await api_call.json();
       setCountry(res.sys.country);
