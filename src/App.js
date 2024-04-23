@@ -5,7 +5,7 @@ import { faArrowUp,faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 
 
-const API_KEYS = "1080f8ec3de12845e74397b14e3632ee";
+const API_KEY = "1080f8ec3de12845e74397b14e3632ee";
 
 function App() {
   const [name, setName] = useState("Vienna");
@@ -21,7 +21,7 @@ function App() {
   const getWeather = async () => {
     try {
       const api_call = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${name}&APPID=${API_KEYS}`
+        `https://api.openweathermap.org/data/2.5/weather?q=${name}&appid=${API_KEY}`
       );
       const res = await api_call.json();
       setCountry(res.sys.country);
