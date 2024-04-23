@@ -8,7 +8,7 @@ import { faArrowUp,faArrowDown } from '@fortawesome/free-solid-svg-icons';
 const API_KEYS = "1080f8ec3de12845e74397b14e3632ee";
 
 function App() {
-  const [name, setName] = useState("London");
+  const [name, setName] = useState("Vienna");
   const [date, setDate] = useState("");
   const [country, setCountry] = useState("");
   const [temp, setTemp] = useState("");
@@ -16,7 +16,7 @@ function App() {
   const [min, setMin] = useState("");
   const [description, setDescription] = useState("");
   const [icon,setIcon] = useState('')
-  console.log('description', typeof description)
+  //console.log('description', typeof description)
 
   const getWeather = async () => {
     try {
@@ -60,8 +60,8 @@ function App() {
   background-size: cover;
   background-position: center;
   z-index: -1;
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
   ${description.includes("clouds")? `background-image: url("cloud.jpg");` :
   description.includes("rain")? `background-image: url("rain.jpg");` :
   description.includes("storm")? `background-image: url("storm.jpg");` :
